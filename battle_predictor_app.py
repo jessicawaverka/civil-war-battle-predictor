@@ -10,7 +10,7 @@ st.set_page_config(page_title="Civil War Battle Predictor", page_icon="⚔️", 
 
 # Title
 st.title("⚔️ Civil War Battle Outcome Predictor")
-st.markdown("### An AI Merit Badge Project by Theo Waverka-Davison (Troop 187B, Brooklyn, NY)")
+st.markdown("### An AI Merit Badge Project by Theo Waverka-Davison, Troop 187B, Brooklyn, NY")
 st.markdown("---")
 
 # Load the data
@@ -151,38 +151,42 @@ with col1:
     confederate_forces = st.number_input("Confederate Forces", min_value=0, max_value=200000, value=40000, step=1000)
 
 with col2:
-    battle_type = st.selectbox("Battle Type", ['Ground', 'Naval'])
-    terrain = st.selectbox("Terrain", ['Open', 'Forest', 'Hills', 'Mixed', 'Urban', 'Coastal', 'River', 'Open Sea'])
+    # Only show options that exist in the data
+    battle_type = st.selectbox("Battle Type", options=sorted(df['Battle Type'].unique()))
+    terrain = st.selectbox("Terrain", options=sorted(df['Terrain'].unique()))
 
 with col3:
-    weather = st.selectbox("Weather", ['Clear', 'Rain', 'Snow', 'Fog'])
-    defender = st.selectbox("Who is Defending?", ['Union', 'Confederate', 'Neither'])
+    weather = st.selectbox("Weather", options=sorted(df['Weather'].unique()))
+    defender = st.selectbox("Who is Defending?", options=sorted(df['Defender'].unique()))
 
 if st.button("🔮 Predict Winner!", type="primary"):
-    # Encode the inputs
-    battle_type_enc = le_battle_type.transform([battle_type])[0]
-    terrain_enc = le_terrain.transform([terrain])[0]
-    weather_enc = le_weather.transform([weather])[0]
-    defender_enc = le_defender.transform([defender])[0]
-    
-    # Make prediction
-    input_data = [[union_forces, confederate_forces, battle_type_enc, 
-                   terrain_enc, weather_enc, defender_enc]]
-    prediction = model.predict(input_data)[0]
-    predicted_winner = le_winner.inverse_transform([prediction])[0]
-    
-    # Get probability
-    probabilities = model.predict_proba(input_data)[0]
-    confidence = max(probabilities) * 100
-    
-    # Display result
-    st.markdown("### 🏆 Prediction Result:")
-    if predicted_winner == "Union":
-        st.success(f"**The AI predicts: UNION victory** (Confidence: {confidence:.1f}%)")
-    elif predicted_winner == "Confederate":
-        st.error(f"**The AI predicts: CONFEDERATE victory** (Confidence: {confidence:.1f}%)")
-    else:
-        st.warning(f"**The AI predicts: DRAW** (Confidence: {confidence:.1f}%)")
+    try:
+        # Encode the inputs
+        battle_type_enc = le_battle_type.transform([battle_type])[0]
+        terrain_enc = le_terrain.transform([terrain])[0]
+        weather_enc = le_weather.transform([weather])[0]
+        defender_enc = le_defender.transform([defender])[0]
+        
+        # Make prediction
+        input_data = [[union_forces, confederate_forces, battle_type_enc, 
+                       terrain_enc, weather_enc, defender_enc]]
+        prediction = model.predict(input_data)[0]
+        predicted_winner = le_winner.inverse_transform([prediction])[0]
+        
+        # Get probability
+        probabilities = model.predict_proba(input_data)[0]
+        confidence = max(probabilities) * 100
+        
+        # Display result
+        st.markdown("### 🏆 Prediction Result:")
+        if predicted_winner == "Union":
+            st.success(f"**The AI predicts: UNION victory** (Confidence: {confidence:.1f}%)")
+        elif predicted_winner == "Confederate":
+            st.error(f"**The AI predicts: CONFEDERATE victory** (Confidence: {confidence:.1f}%)")
+        else:
+            st.warning(f"**The AI predicts: DRAW** (Confidence: {confidence:.1f}%)")
+    except Exception as e:
+        st.error(f"Error making prediction. Please try different values. ({str(e)})")
 
 # Feature importance
 st.markdown("---")
