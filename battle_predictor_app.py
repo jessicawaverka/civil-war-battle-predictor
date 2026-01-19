@@ -10,7 +10,7 @@ st.set_page_config(page_title="Civil War Battle Predictor", page_icon="⚔️", 
 
 # Title
 st.title("⚔️ Civil War Battle Outcome Predictor")
-st.markdown("### An AI Merit Badge Project by Theo")
+st.markdown("### An AI Merit Badge Project by Theo Waverka-Davison (Troop 187B, Brooklyn, NY)")
 st.markdown("---")
 
 # Load the data
@@ -66,13 +66,23 @@ X = df[features]
 y = df['Winner_Encoded']
 
 # Split into training (80%) and testing (20%)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Use stratify to ensure balanced representation of winners in both sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
 st.write(f"✅ Using {len(X_train)} battles to train the AI")
 st.write(f"✅ Using {len(X_test)} battles to test the AI")
 
-# Train the decision tree
-model = DecisionTreeClassifier(max_depth=5, random_state=42)
+# Show distribution
+train_winners = pd.Series(y_train).value_counts()
+st.write(f"Training set has: {le_winner.inverse_transform(train_winners.index).tolist()}")
+
+# Train the decision tree with better parameters
+model = DecisionTreeClassifier(
+    max_depth=8,  # Deeper tree for more nuanced decisions
+    min_samples_split=5,  # Prevent overfitting
+    min_samples_leaf=2,  # Prevent overfitting
+    random_state=42
+)
 model.fit(X_train, y_train)
 
 # Calculate accuracy
@@ -115,7 +125,7 @@ st.markdown("---")
 st.header("🌳 The AI's Decision Rules")
 st.write("This tree shows how the AI makes decisions:")
 
-fig, ax = plt.subplots(figsize=(20, 10))
+fig, ax = plt.subplots(figsize=(25, 12))
 plot_tree(model, 
           feature_names=['Union Forces', 'Confederate Forces', 'Battle Type', 
                         'Terrain', 'Weather', 'Defender'],
@@ -123,7 +133,8 @@ plot_tree(model,
           filled=True, 
           rounded=True,
           ax=ax,
-          fontsize=10)
+          fontsize=8,
+          max_depth=4)  # Show only top 4 levels for readability
 st.pyplot(fig)
 
 st.info("💡 Read the tree from top to bottom. Each box shows a decision rule the AI learned!")
@@ -201,7 +212,7 @@ st.warning("""
 - Leadership quality (Grant vs. Bragg, Lee vs. McClellan)
 - Soldier morale and fighting spirit
 - Element of surprise or brilliant tactics
-- Supply line conditions
+- Supply line logistics
 - Political pressure and strategic objectives
 - Weather changes during battle
 - Individual soldier bravery and unit cohesion
