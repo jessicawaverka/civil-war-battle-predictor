@@ -1,0 +1,108 @@
+Battle Name,Battle Type,Union Forces,Confederate Forces,Terrain,Weather,Defender,Winner
+Fort Sumter,Ground,85,500,Urban,Clear,Union,Confederate
+Philippi,Ground,3000,800,Mixed,Rain,Confederate,Union
+Big Bethel,Ground,4400,1400,Mixed,Clear,Confederate,Confederate
+Boonville,Ground,1700,1000,Open,Clear,Confederate,Union
+Carthage,Ground,1100,6000,Open,Clear,Union,Confederate
+Rich Mountain,Ground,2000,1300,Hills,Clear,Confederate,Union
+First Bull Run,Ground,35000,32000,Mixed,Clear,Confederate,Confederate
+Wilson's Creek,Ground,5400,12000,Mixed,Clear,Union,Confederate
+Hatteras Inlet,Naval,9,2,Coastal,Clear,Confederate,Union
+Cheat Mountain,Ground,15000,5000,Hills,Rain,Union,Union
+Ball's Bluff,Ground,1700,1600,Mixed,Clear,Union,Confederate
+Belmont,Ground,3100,2700,Mixed,Clear,Confederate,Draw
+Port Royal,Naval,17,11,Coastal,Clear,Confederate,Union
+Fort Henry,Ground,15000,3400,River,Rain,Confederate,Union
+Fort Donelson,Ground,27000,16000,Urban,Clear,Confederate,Union
+Hampton Roads,Naval,6,3,Coastal,Clear,Union,Draw
+Pea Ridge,Ground,10500,16000,Forest,Clear,Confederate,Union
+Monitor vs Virginia,Naval,1,1,Coastal,Clear,Neither,Draw
+Kernstown,Ground,9000,3000,Open,Clear,Union,Confederate
+Island Number 10,Ground,25000,7000,River,Rain,Confederate,Union
+Shiloh,Ground,65000,44000,Forest,Clear,Union,Union
+New Orleans,Naval,24,15,River,Clear,Confederate,Union
+Yorktown Siege,Ground,121500,56000,Urban,Rain,Confederate,Union
+Williamsburg,Ground,40700,31600,Mixed,Clear,Confederate,Draw
+McDowell,Ground,6000,2500,Hills,Clear,Union,Confederate
+Front Royal,Ground,1000,1000,Open,Clear,Union,Confederate
+First Winchester,Ground,6500,16000,Open,Clear,Union,Confederate
+Cross Keys,Ground,10500,5800,Mixed,Clear,Union,Confederate
+Port Republic,Ground,12000,6000,Mixed,Clear,Union,Confederate
+Memphis,Naval,8,8,River,Clear,Confederate,Union
+Seven Pines,Ground,42000,42000,Mixed,Rain,Confederate,Draw
+Oak Grove,Ground,15500,8000,Forest,Clear,Confederate,Union
+Mechanicsville,Ground,15631,16356,Mixed,Clear,Confederate,Confederate
+Gaines Mill,Ground,34214,57018,Mixed,Clear,Union,Confederate
+Savage Station,Ground,26600,14000,Mixed,Clear,Confederate,Draw
+White Oak Swamp,Ground,28000,45000,Forest,Clear,Confederate,Confederate
+Malvern Hill,Ground,54000,55000,Hills,Clear,Confederate,Union
+Cedar Mountain,Ground,8000,16800,Mixed,Clear,Union,Confederate
+Second Bull Run,Ground,75000,50000,Mixed,Clear,Union,Confederate
+Chantilly,Ground,8000,12000,Open,Rain,Union,Confederate
+Harpers Ferry,Ground,12500,26000,Hills,Clear,Union,Confederate
+South Mountain,Ground,28000,18000,Hills,Clear,Confederate,Union
+Antietam,Ground,87000,45000,Mixed,Clear,Confederate,Draw
+Iuka,Ground,17000,14000,Open,Clear,Confederate,Union
+Corinth,Ground,23000,22000,Urban,Clear,Union,Union
+Perryville,Ground,55000,16000,Open,Clear,Confederate,Draw
+Prairie Grove,Ground,10000,11000,Mixed,Clear,Confederate,Union
+Fredericksburg,Ground,120000,72500,Urban,Clear,Confederate,Confederate
+Stones River,Ground,43000,35000,Mixed,Rain,Confederate,Draw
+Arkansas Post,Ground,33000,5000,River,Clear,Confederate,Union
+Galveston,Naval,8,6,Coastal,Clear,Union,Confederate
+Sabine Pass,Naval,4,47,Coastal,Clear,Confederate,Confederate
+Thompson's Station,Ground,2800,4500,Open,Clear,Union,Confederate
+Port Hudson Siege,Ground,30000,7500,Hills,Clear,Confederate,Union
+Chancellorsville,Ground,133000,60000,Forest,Clear,Union,Confederate
+Port Gibson,Ground,23000,8000,Mixed,Clear,Confederate,Union
+Raymond,Ground,12000,4000,Mixed,Clear,Confederate,Union
+Jackson MS,Ground,6000,6000,Urban,Rain,Confederate,Union
+Champion Hill,Ground,32000,22000,Hills,Clear,Confederate,Union
+Big Black River,Ground,10000,4000,River,Clear,Confederate,Union
+Vicksburg Siege,Ground,77000,33000,Hills,Clear,Confederate,Union
+Brandy Station,Ground,11000,9500,Open,Clear,Confederate,Draw
+Second Winchester,Ground,9000,12500,Open,Clear,Union,Confederate
+Gettysburg,Ground,93500,71000,Hills,Clear,Union,Union
+Helena,Ground,4129,7600,Urban,Clear,Union,Union
+Honey Springs,Ground,3000,5000,Mixed,Clear,Confederate,Union
+Chickamauga,Ground,58000,66000,Forest,Clear,Union,Confederate
+Chattanooga,Ground,56000,46000,Hills,Clear,Confederate,Union
+Charleston Harbor,Naval,9,6,Coastal,Clear,Confederate,Confederate
+Mine Run,Ground,69643,48586,Forest,Clear,Confederate,Draw
+Olustee,Ground,5500,5200,Forest,Clear,Union,Confederate
+Meridian Campaign,Ground,25000,10000,Mixed,Clear,Confederate,Union
+Mansfield,Ground,12000,11000,Mixed,Clear,Union,Confederate
+Pleasant Hill,Ground,12500,14300,Open,Clear,Confederate,Draw
+Fort Pillow,Ground,557,1500,Urban,Clear,Union,Confederate
+Plymouth,Ground,2834,10000,Urban,Clear,Union,Confederate
+Wilderness,Ground,102000,61000,Forest,Clear,Confederate,Draw
+Spotsylvania,Ground,100000,52000,Mixed,Clear,Confederate,Draw
+Yellow Tavern,Ground,8000,4500,Open,Clear,Confederate,Union
+New Market,Ground,6275,4100,Open,Rain,Union,Confederate
+Drewry's Bluff,Ground,30000,18000,Hills,Clear,Union,Confederate
+Resaca,Ground,100000,60000,Mixed,Clear,Confederate,Draw
+New Hope Church,Ground,38000,60000,Forest,Clear,Confederate,Draw
+Cold Harbor,Ground,108000,62000,Mixed,Clear,Confederate,Confederate
+Brice's Crossroads,Ground,8100,3500,Mixed,Clear,Union,Confederate
+Trevilian Station,Ground,6000,5000,Open,Clear,Confederate,Draw
+Kennesaw Mountain,Ground,100000,65000,Hills,Clear,Confederate,Confederate
+Monocacy,Ground,5800,14000,Mixed,Clear,Union,Confederate
+Tupelo,Ground,14000,9500,Mixed,Clear,Confederate,Union
+Crater,Ground,20000,11000,Urban,Clear,Confederate,Confederate
+Mobile Bay,Naval,18,4,Coastal,Clear,Confederate,Union
+Atlanta,Ground,98000,65000,Urban,Clear,Confederate,Union
+Fisher's Hill,Ground,12500,9500,Open,Clear,Confederate,Union
+Chaffin's Farm,Ground,13000,1800,Mixed,Clear,Confederate,Union
+Allatoona,Ground,2000,2000,Hills,Clear,Union,Union
+Cedar Creek,Ground,31000,21000,Open,Clear,Union,Union
+Westport,Ground,22000,9000,Open,Clear,Confederate,Union
+Johnsonville,Ground,500,3000,River,Clear,Union,Confederate
+Franklin,Ground,27000,23000,Open,Clear,Confederate,Union
+Nashville,Ground,55000,31000,Urban,Clear,Confederate,Union
+Fort Fisher First,Naval,60,1500,Coastal,Rain,Confederate,Confederate
+Fort Fisher Second,Naval,58,1500,Coastal,Clear,Confederate,Union
+Rivers Bridge,Ground,4500,1200,Forest,Rain,Confederate,Confederate
+Fort Stedman,Ground,11500,12900,Urban,Clear,Union,Union
+Five Forks,Ground,22000,10600,Mixed,Clear,Confederate,Union
+Sailor's Creek,Ground,26000,7800,Mixed,Clear,Confederate,Union
+Appomattox Court House,Ground,63000,28000,Open,Clear,Confederate,Union
